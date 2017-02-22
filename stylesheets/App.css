@@ -13,7 +13,7 @@ body {
 /* line 7, ../sass/App.scss */
 body {
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* line 12, ../sass/App.scss */
@@ -67,7 +67,7 @@ body {
 
 /* line 55, ../sass/App.scss */
 .About {
-  background-color: #A7A37E;
+  background-color: #E6E2AF;
   height: 500px;
   padding-top: 50px;
   padding-left: 10%;
@@ -91,9 +91,11 @@ body {
   font-size: 64px;
   color: #EFECCA;
   margin-top: 0px;
+  text-align: left;
+  margin-left: 8%;
 }
 
-/* line 79, ../sass/App.scss */
+/* line 81, ../sass/App.scss */
 .parralax {
   background-attachment: fixed;
   background-position: center;
@@ -101,7 +103,7 @@ body {
   background-size: cover;
 }
 
-/* line 86, ../sass/App.scss */
+/* line 88, ../sass/App.scss */
 .cell-middle {
   display: table;
   vertical-align: middle;
@@ -112,7 +114,7 @@ body {
   padding-bottom: 180px;
 }
 
-/* line 96, ../sass/App.scss */
+/* line 98, ../sass/App.scss */
 #travispic {
   width: 100%;
   height: auto;
@@ -120,7 +122,7 @@ body {
   border-radius: 10px;
 }
 
-/* line 103, ../sass/App.scss */
+/* line 105, ../sass/App.scss */
 .left-component {
   float: left;
   width: 40%;
@@ -128,7 +130,7 @@ body {
   text-align: center;
 }
 
-/* line 110, ../sass/App.scss */
+/* line 112, ../sass/App.scss */
 .right-component {
   position: relative;
   left: 20px;
@@ -137,7 +139,7 @@ body {
   margin-top: 90px;
   text-align: left;
 }
-/* line 117, ../sass/App.scss */
+/* line 119, ../sass/App.scss */
 .right-component ul li {
   float: right;
   list-style: none;
@@ -145,19 +147,19 @@ body {
   padding-right: 20px;
 }
 
-/* line 125, ../sass/App.scss */
+/* line 127, ../sass/App.scss */
 .highlightimg {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-/* line 131, ../sass/App.scss */
+/* line 133, ../sass/App.scss */
 .portfolioimgs {
   margin-top: 30px;
 }
 
-/* line 137, ../sass/App.scss */
+/* line 139, ../sass/App.scss */
 .card-container {
   height: 336.25px;
   perspective: 600;
@@ -167,7 +169,7 @@ body {
   margin-right: 4%;
 }
 
-/* line 145, ../sass/App.scss */
+/* line 147, ../sass/App.scss */
 .card {
   height: 100%;
   position: absolute;
@@ -176,12 +178,12 @@ body {
   width: 100%;
 }
 
-/* line 152, ../sass/App.scss */
+/* line 154, ../sass/App.scss */
 .card:hover {
   transform: rotateY(180deg);
 }
 
-/* line 155, ../sass/App.scss */
+/* line 157, ../sass/App.scss */
 .card .side {
   backface-visibility: hidden;
   height: 100%;
@@ -189,10 +191,29 @@ body {
   width: 100%;
 }
 
-/* line 161, ../sass/App.scss */
+/* line 163, ../sass/App.scss */
 .card .back {
   transform: rotateY(180deg);
   background-color: #EFECCA;
   color: #002F2F;
   border-radius: 10px;
+  padding: 20px;
+}
+
+/* line 171, ../sass/App.scss */
+.Contact {
+  background-color: #E6E2AF;
+  height: 500px;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #046380;
+}
+/* line 178, ../sass/App.scss */
+.Contact h1 {
+  text-align: left;
+}
+/* line 181, ../sass/App.scss */
+.Contact p {
+  text-align: left;
 }

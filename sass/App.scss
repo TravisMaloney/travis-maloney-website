@@ -53,7 +53,7 @@ body {
 }
 
 .About {
-  background-color: $sandstone;
+  background-color: $beige;
   height: 500px;
   padding-top: 50px;
   padding-left: 10%;
@@ -73,6 +73,8 @@ body {
     font-size: 64px;
     color: $offwhite;
     margin-top: 0px;
+    text-align: left;
+    margin-left: 8%;
   }
 }
 
@@ -163,4 +165,20 @@ body {
   background-color: $offwhite;
   color: $darkblue;
   border-radius: 10px;
+  padding: 20px;
+}
+
+.Contact {
+  background-color: $beige;
+  height: 500px;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: $blue;
+  h1{
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
 }
