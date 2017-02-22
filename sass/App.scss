@@ -1,0 +1,166 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+@import "partials/base";
+@import "compass/css3";
+
+body {
+  text-align: center;
+  font-family: $mainfont;
+}
+
+#logoimg {
+  width: auto;
+  height: 50px;
+}
+
+/* Collapsing Navbar Styles */
+
+@media(min-width:768px) {
+  .navbar-default {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    padding: 20px 0;
+    /* Add additional styles here for the UNCOLLAPSED state */
+    background: linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) );
+    border: none;
+    color: $offwhite;
+  }
+  .navbar-default.affix {
+    padding: 5px;
+    /* Add additional styles here for the COLLAPSED state */
+    background-color: $offwhite;
+    box-shadow: 0 2px 4px #222222;
+    color: $darkblue;
+  }
+}
+
+.Hero {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/code.jpeg");
+  height: 700px;
+  width: auto;
+  h1{
+      font-size: 64px;
+  }
+  h2{
+    font-size: 48px;
+    margin-bottom: -10px;
+  }
+  h3{
+      font-style: italic;
+  }
+}
+
+.About {
+  background-color: $sandstone;
+  height: 500px;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  h1 {
+    color: $blue;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+.Portfolio {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/oldcourthouse.jpeg");
+  height: 500px;
+  padding-top: 20px;
+  h1 {
+    font-size: 64px;
+    color: $offwhite;
+    margin-top: 0px;
+  }
+}
+
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cell-middle {
+  display: table;
+  vertical-align: middle;
+  color: $offwhite;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 230px;
+  padding-bottom: 180px;
+}
+
+#travispic {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-radius: 10px;
+}
+
+.left-component {
+  float: left;
+  width: 40%;
+  height: 300px;
+  text-align: center;
+}
+
+.right-component {
+  position: relative;
+  left: 20px;
+  color: $blue;
+  width: auto;
+  margin-top: 90px;
+  text-align: left;
+  ul li {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    padding-right: 20px;
+  }
+}
+
+.highlightimg {
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+
+.portfolioimgs {
+  margin-top: 30px;
+}
+
+//Portfolio animation
+
+.card-container {
+  height: 336.25px;
+  perspective: 600;
+  position: relative;
+  width: 336.25px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
+  background-color: $offwhite;
+  color: $darkblue;
+  border-radius: 10px;
+}

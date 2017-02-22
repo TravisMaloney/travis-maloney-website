@@ -1,0 +1,198 @@
+/* line 1, ../sass/partials/_base.scss */
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* line 5, ../sass/partials/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/App.scss */
+body {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* line 12, ../sass/App.scss */
+#logoimg {
+  width: auto;
+  height: 50px;
+}
+
+/* Collapsing Navbar Styles */
+@media (min-width: 768px) {
+  /* line 20, ../sass/App.scss */
+  .navbar-default {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    padding: 20px 0;
+    /* Add additional styles here for the UNCOLLAPSED state */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    border: none;
+    color: #EFECCA;
+  }
+
+  /* line 30, ../sass/App.scss */
+  .navbar-default.affix {
+    padding: 5px;
+    /* Add additional styles here for the COLLAPSED state */
+    background-color: #EFECCA;
+    box-shadow: 0 2px 4px #222222;
+    color: #002F2F;
+  }
+}
+/* line 39, ../sass/App.scss */
+.Hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/code.jpeg");
+  height: 700px;
+  width: auto;
+}
+/* line 43, ../sass/App.scss */
+.Hero h1 {
+  font-size: 64px;
+}
+/* line 46, ../sass/App.scss */
+.Hero h2 {
+  font-size: 48px;
+  margin-bottom: -10px;
+}
+/* line 50, ../sass/App.scss */
+.Hero h3 {
+  font-style: italic;
+}
+
+/* line 55, ../sass/App.scss */
+.About {
+  background-color: #A7A37E;
+  height: 500px;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* line 61, ../sass/App.scss */
+.About h1 {
+  color: #046380;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* line 68, ../sass/App.scss */
+.Portfolio {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/oldcourthouse.jpeg");
+  height: 500px;
+  padding-top: 20px;
+}
+/* line 72, ../sass/App.scss */
+.Portfolio h1 {
+  font-size: 64px;
+  color: #EFECCA;
+  margin-top: 0px;
+}
+
+/* line 79, ../sass/App.scss */
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 86, ../sass/App.scss */
+.cell-middle {
+  display: table;
+  vertical-align: middle;
+  color: #EFECCA;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 230px;
+  padding-bottom: 180px;
+}
+
+/* line 96, ../sass/App.scss */
+#travispic {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-radius: 10px;
+}
+
+/* line 103, ../sass/App.scss */
+.left-component {
+  float: left;
+  width: 40%;
+  height: 300px;
+  text-align: center;
+}
+
+/* line 110, ../sass/App.scss */
+.right-component {
+  position: relative;
+  left: 20px;
+  color: #046380;
+  width: auto;
+  margin-top: 90px;
+  text-align: left;
+}
+/* line 117, ../sass/App.scss */
+.right-component ul li {
+  float: right;
+  list-style: none;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+/* line 125, ../sass/App.scss */
+.highlightimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* line 131, ../sass/App.scss */
+.portfolioimgs {
+  margin-top: 30px;
+}
+
+/* line 137, ../sass/App.scss */
+.card-container {
+  height: 336.25px;
+  perspective: 600;
+  position: relative;
+  width: 336.25px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+/* line 145, ../sass/App.scss */
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+/* line 152, ../sass/App.scss */
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+/* line 155, ../sass/App.scss */
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 161, ../sass/App.scss */
+.card .back {
+  transform: rotateY(180deg);
+  background-color: #EFECCA;
+  color: #002F2F;
+  border-radius: 10px;
+}
