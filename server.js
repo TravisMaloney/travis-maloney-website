@@ -1,18 +1,24 @@
-var http = require("http");
-var connect = require('connect');
+const express = require('express');
+const app = express();
+var engines = require('consolidate');
 
-var app = connect()
-    .use(connect.static(__dirname + '/index'))
-    .use(function(req, res) {
-        console.log('Could not find handler for: ' + req.url);
-        res.end('Could not find handler for: ' + req.url);
-    })
-    .use(function(err, req, res, next) {
-        console.log('Error trapped by Connect: ' + err.message + ' : ' + err.stack);
-        res.end('Error trapped by Connect: ' + err.message);
-    });
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
 
-// Start node server listening on specified port -----
-http.createServer(app).listen(80);
+// NEW CODE
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/images', express.static(__dirname + '/images'));
+app.use('/stylesheets', express.static(__dirname + '/stylesheets'));
 
-console.log('HTTP server listening on port 80');
+
+// END OF NEW CODE
+
+app.get("/", function(req,res){
+    res.render('index.html')
+});
+
+app.listen(80, () => {
+	console.log('Server Started on http://localhost:8080');
+	console.log('Press CTRL + C to stop server');
+});
+
