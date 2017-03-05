@@ -1,17 +1,18 @@
-var express = require('express')
-var app = express()
-var router = express.Router();
+var http = require("http");
+var connect = require('connect');
 
+var app = connect()
+    .use(connect.static(__dirname + '/index'))
+    .use(function(req, res) {
+        console.log('Could not find handler for: ' + req.url);
+        res.end('Could not find handler for: ' + req.url);
+    })
+    .use(function(err, req, res, next) {
+        console.log('Error trapped by Connect: ' + err.message + ' : ' + err.stack);
+        res.end('Error trapped by Connect: ' + err.message);
+    });
 
-app.set('port', (process.env.PORT || 80))
-app.use(express.static(__dirname + '/public'))
+// Start node server listening on specified port -----
+http.createServer(app).listen(80);
 
-router.get('http://54.213.195.6/', function(request, response) {
-  response.render('index')
-})
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
-
-module.express = router;
+console.log('HTTP server listening on port 80');
