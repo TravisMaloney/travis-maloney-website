@@ -1,42 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
 /* line 1, ../sass/partials/_base.scss */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* line 5, ../sass/partials/_base.scss */
+/* line 6, ../sass/partials/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 7, ../sass/App.scss */
-body {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
+/* Navbar styling */
+/* line 11, ../sass/App.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #046380;
+}
+/* line 13, ../sass/App.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #002F2F;
 }
 
-/* line 12, ../sass/App.scss */
+/* line 18, ../sass/App.scss */
 #logoimg {
   width: auto;
   height: 50px;
 }
 
+/* Logo slide in effect */
+/* line 25, ../sass/App.scss */
+.slide {
+  position: absolute;
+  left: -200px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 100px;
+  }
+}
+@keyframes slide {
+  100% {
+    left: 100px;
+  }
+}
 /* Collapsing Navbar Styles */
 @media (min-width: 768px) {
-  /* line 20, ../sass/App.scss */
+  /* line 47, ../sass/App.scss */
   .navbar-default {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
     padding: 20px 0;
     /* Add additional styles here for the UNCOLLAPSED state */
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    background: #E6E2AF;
     border: none;
-    color: #EFECCA;
   }
 
-  /* line 30, ../sass/App.scss */
+  /* line 56, ../sass/App.scss */
   .navbar-default.affix {
     padding: 5px;
     /* Add additional styles here for the COLLAPSED state */
@@ -45,65 +73,28 @@ body {
     color: #002F2F;
   }
 }
-/* line 39, ../sass/App.scss */
+/* Welcome/Hero */
+/* line 67, ../sass/App.scss */
 .Hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/code.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/code.jpeg");
   height: 700px;
   width: auto;
 }
-/* line 43, ../sass/App.scss */
+/* line 71, ../sass/App.scss */
 .Hero h1 {
   font-size: 64px;
 }
-/* line 46, ../sass/App.scss */
+/* line 74, ../sass/App.scss */
 .Hero h2 {
   font-size: 48px;
   margin-bottom: -10px;
 }
-/* line 50, ../sass/App.scss */
+/* line 78, ../sass/App.scss */
 .Hero h3 {
   font-style: italic;
 }
 
-/* line 55, ../sass/App.scss */
-.About {
-  background-color: #E6E2AF;
-  height: 500px;
-  padding-top: 50px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-/* line 61, ../sass/App.scss */
-.About h1 {
-  color: #046380;
-  display: block;
-  margin-bottom: 15px;
-}
-
-/* line 68, ../sass/App.scss */
-.Portfolio {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/oldcourthouse.jpeg");
-  height: 500px;
-  padding-top: 20px;
-}
-/* line 72, ../sass/App.scss */
-.Portfolio h1 {
-  font-size: 64px;
-  color: #EFECCA;
-  margin-top: 0px;
-  text-align: left;
-  margin-left: 8%;
-}
-
-/* line 81, ../sass/App.scss */
-.parralax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* line 88, ../sass/App.scss */
+/* line 85, ../sass/App.scss */
 .cell-middle {
   display: table;
   vertical-align: middle;
@@ -114,15 +105,31 @@ body {
   padding-bottom: 180px;
 }
 
+/* About section */
 /* line 98, ../sass/App.scss */
+.About {
+  background-color: #EFECCA;
+  height: 500px;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* line 104, ../sass/App.scss */
+.About h1 {
+  color: #002F2F;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* line 111, ../sass/App.scss */
 #travispic {
   width: 100%;
   height: auto;
   float: left;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-/* line 105, ../sass/App.scss */
+/* line 118, ../sass/App.scss */
 .left-component {
   float: left;
   width: 40%;
@@ -130,16 +137,16 @@ body {
   text-align: center;
 }
 
-/* line 112, ../sass/App.scss */
+/* line 125, ../sass/App.scss */
 .right-component {
   position: relative;
   left: 20px;
-  color: #046380;
+  color: #002F2F;
   width: auto;
   margin-top: 90px;
   text-align: left;
 }
-/* line 119, ../sass/App.scss */
+/* line 132, ../sass/App.scss */
 .right-component ul li {
   float: right;
   list-style: none;
@@ -147,73 +154,203 @@ body {
   padding-right: 20px;
 }
 
-/* line 127, ../sass/App.scss */
+/*Portfolio Section */
+/* line 142, ../sass/App.scss */
+.Portfolio {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/oldcourthouse.jpeg");
+  height: 500px;
+  padding-top: 20px;
+}
+/* line 146, ../sass/App.scss */
+.Portfolio h1 {
+  font-size: 64px;
+  color: #EFECCA;
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 8%;
+}
+
+/* line 155, ../sass/App.scss */
 .highlightimg {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* line 133, ../sass/App.scss */
-.portfolioimgs {
-  margin-top: 30px;
-}
-
-/* line 139, ../sass/App.scss */
+/* line 163, ../sass/App.scss */
 .card-container {
   height: 336.25px;
   perspective: 600;
-  position: relative;
+  position: inline-block;
   width: 336.25px;
   margin-left: 4%;
   margin-right: 4%;
 }
 
-/* line 147, ../sass/App.scss */
+/* line 171, ../sass/App.scss */
 .card {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
+  margin: 20px 0;
 }
-
-/* line 154, ../sass/App.scss */
-.card:hover {
-  transform: rotateY(180deg);
-}
-
-/* line 157, ../sass/App.scss */
+/* line 179, ../sass/App.scss */
 .card .side {
   backface-visibility: hidden;
   height: 100%;
   position: absolute;
   width: 100%;
 }
-
-/* line 163, ../sass/App.scss */
+/* line 186, ../sass/App.scss */
 .card .back {
   transform: rotateY(180deg);
   background-color: #EFECCA;
   color: #002F2F;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
 }
+/* line 194, ../sass/App.scss */
+.card:hover {
+  transform: rotateY(180deg);
+}
 
-/* line 171, ../sass/App.scss */
+/*Contact Section*/
+/* line 200, ../sass/App.scss */
 .Contact {
-  background-color: #E6E2AF;
+  background-color: #EFECCA;
   height: 500px;
   padding-top: 40px;
   padding-left: 10%;
   padding-right: 10%;
-  color: #046380;
-}
-/* line 178, ../sass/App.scss */
-.Contact h1 {
+  color: #002F2F;
   text-align: left;
 }
-/* line 181, ../sass/App.scss */
-.Contact p {
-  text-align: left;
+/* line 208, ../sass/App.scss */
+.Contact ul {
+  margin-top: 30px;
+  float: left;
+}
+/* line 212, ../sass/App.scss */
+.Contact li {
+  list-style: none;
+}
+/* line 214, ../sass/App.scss */
+.Contact li #emailicon {
+  width: 46px;
+  height: 46px;
+}
+
+/* line 220, ../sass/App.scss */
+.contactcontent {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+/*Contact Form*/
+/* line 227, ../sass/App.scss */
+form {
+  max-width: 600px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 40px;
+  float: left;
+}
+/* line 234, ../sass/App.scss */
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+/* line 245, ../sass/App.scss */
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #046380 !important;
+  -webkit-box-shadow: 0 0px 2px #046380 !important;
+  box-shadow: 0 0px 2px #046380 !important;
+}
+/* line 250, ../sass/App.scss */
+form #input-submit {
+  color: white;
+  background: #046380;
+  cursor: pointer;
+}
+/* line 255, ../sass/App.scss */
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+/* line 260, ../sass/App.scss */
+form textarea {
+  height: 126px;
+}
+
+/* line 265, ../sass/App.scss */
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+/* line 271, ../sass/App.scss */
+.right {
+  width: 50%;
+}
+
+/* line 273, ../sass/App.scss */
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  /* line 278, ../sass/App.scss */
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+/* line 286, ../sass/App.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 292, ../sass/App.scss */
+.cf:after {
+  clear: both;
+}
+
+/*Footer*/
+/* line 297, ../sass/App.scss */
+footer {
+  background-color: #A7A37E;
+  height: 75px;
+  width: auto;
+  padding: 25px;
+  color: #002F2F;
+}
+
+/* line 306, ../sass/App.scss */
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

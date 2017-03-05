@@ -3,15 +3,42 @@
 @import "partials/normalize";
 @import "partials/base";
 @import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
 
-body {
-  text-align: center;
-  font-family: $mainfont;
+
+/* Navbar styling */
+
+.navbar-default .navbar-nav>li>a {
+    color: $blue;
+    &:hover {
+      color: $darkblue;
+    }
 }
 
 #logoimg {
   width: auto;
   height: 50px;
+}
+
+/* Logo slide in effect */
+
+.slide {
+    position: absolute;
+    left: -200px;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 100px; }
+}
+
+@keyframes slide {
+    100% { left: 100px; }
 }
 
 /* Collapsing Navbar Styles */
@@ -23,9 +50,8 @@ body {
     transition: all .35s;
     padding: 20px 0;
     /* Add additional styles here for the UNCOLLAPSED state */
-    background: linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) );
+    background: $beige;
     border: none;
-    color: $offwhite;
   }
   .navbar-default.affix {
     padding: 5px;
@@ -36,8 +62,10 @@ body {
   }
 }
 
+/* Welcome/Hero */
+
 .Hero {
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/code.jpeg");
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("../images/code.jpeg");
   height: 700px;
   width: auto;
   h1{
@@ -52,18 +80,64 @@ body {
   }
 }
 
+//Contents of Hero
+
+.cell-middle {
+  display: table;
+  vertical-align: middle;
+  color: $offwhite;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 230px;
+  padding-bottom: 180px;
+}
+
+
+/* About section */
+
 .About {
-  background-color: $beige;
+  background-color: $offwhite;
   height: 500px;
   padding-top: 50px;
   padding-left: 10%;
   padding-right: 10%;
   h1 {
-    color: $blue;
+    color: $darkblue;
     display: block;
     margin-bottom: 15px;
   }
 }
+
+#travispic {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-radius: 5px;
+}
+
+.left-component {
+  float: left;
+  width: 40%;
+  height: 300px;
+  text-align: center;
+}
+
+.right-component {
+  position: relative;
+  left: 20px;
+  color: $darkblue;
+  width: auto;
+  margin-top: 90px;
+  text-align: left;
+  ul li {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*Portfolio Section */
 
 .Portfolio {
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/oldcourthouse.jpeg");
@@ -78,60 +152,10 @@ body {
   }
 }
 
-.parralax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.cell-middle {
-  display: table;
-  vertical-align: middle;
-  color: $offwhite;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 230px;
-  padding-bottom: 180px;
-}
-
-#travispic {
-  width: 100%;
-  height: auto;
-  float: left;
-  border-radius: 10px;
-}
-
-.left-component {
-  float: left;
-  width: 40%;
-  height: 300px;
-  text-align: center;
-}
-
-.right-component {
-  position: relative;
-  left: 20px;
-  color: $blue;
-  width: auto;
-  margin-top: 90px;
-  text-align: left;
-  ul li {
-    float: right;
-    list-style: none;
-    margin-top: 20px;
-    padding-right: 20px;
-  }
-}
-
 .highlightimg {
- width: 100%;
- height: 100%;
- border-radius: 10px;
-}
-
-.portfolioimgs {
-  margin-top: 30px;
+ max-width: 100%;
+ height: auto;
+ border-radius: 5px;
 }
 
 //Portfolio animation
@@ -139,7 +163,7 @@ body {
 .card-container {
   height: 336.25px;
   perspective: 600;
-  position: relative;
+  position: inline-block;
   width: 336.25px;
   margin-left: 4%;
   margin-right: 4%;
@@ -150,35 +174,138 @@ body {
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
-}
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .side {
-  backface-visibility: hidden;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.card .back {
-  transform: rotateY(180deg);
-  background-color: $offwhite;
-  color: $darkblue;
-  border-radius: 10px;
-  padding: 20px;
+  margin: 20px 0;
+
+  .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background-color: $offwhite;
+    color: $darkblue;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  &:hover{
+    transform: rotateY(180deg);
+  }
 }
 
+/*Contact Section*/
 .Contact {
-  background-color: $beige;
+  background-color: $offwhite;
   height: 500px;
   padding-top: 40px;
   padding-left: 10%;
   padding-right: 10%;
-  color: $blue;
-  h1{
-    text-align: left;
+  color: $darkblue;
+  text-align: left;
+  ul{
+    margin-top: 30px;
+    float: left;
   }
-  p {
-    text-align: left;
+  li {
+    list-style: none;
+    #emailicon {
+      width: 46px;
+      height: 46px;
+    }
   }
+}
+.contactcontent {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+/*Contact Form*/
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin-top: 20px;
+   margin-right: 40px;
+   float: left;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($blue, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $blue;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 126px;
+  }
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*Footer*/
+footer {
+  background-color: $sandstone;
+  height: 75px;
+  width: auto;
+  padding: 25px;
+  color: $darkblue;
+}
+
+//Parralax styling to keep bg imgs in place
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

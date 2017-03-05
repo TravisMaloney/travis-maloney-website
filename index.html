@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/App.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">    
-    <title>Travis Maloney: Developer</title>
+    <title>Travis Maloney: A London, Ontario based Web Developer</title>
   </head>
 
   <body>
@@ -16,22 +16,22 @@
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">
           <div class="container">
             <div class="navbar-header">
-              <a href="#" class="navbar-left"><img id="logoimg" src="images/logo2.svg" /></a>
+              <a href="#" class="navbar-left"><img id="logoimg" class="slide" src="images/logo2.svg" /></a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#">Welcome</a>
+                  <a href="#welcome">Welcome</a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#">Portfolio</a>
+                  <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -40,6 +40,7 @@
     </header>
 
     <main>
+    <a name="welcome"></a> 
 	  <div class="Hero parralax">
       <div class="cell-middle">
         <h2>Hi, my name is</h2>
@@ -49,7 +50,8 @@
     </div>
 
 <!--About -->
-    <div class="About">
+    <a name="about"> 
+    <div class="About"></a>
       <div class="left-component">
         <h1>THE JOURNEY</h1>
         <img id="travispic" src="images/travissmall.png" />
@@ -68,10 +70,11 @@
     </div>
 
 <!-- Portfolio -->
+  <a name="portfolio"></a>
     <div class="Portfolio parralax">
       <h1>Projects</h1>
       <div class="portfolioimgs">
-        <div class="col-md-4 card-container">
+        <div class="col-md-3 card-container">
           <div class="card">
             <div class="side">
               <img class="highlightimg" src="images/snoozy.png" />
@@ -82,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 card-container">
+        <div class="col-md-3 card-container">
             <div class="card">
               <div class="side">
                 <img class="highlightimg" src="images/gimme.png" />
@@ -93,7 +96,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-4 card-container">
+        <div class="col-md-3 card-container">
             <div class="card">
               <div class="side">
                 <img class="highlightimg" src="images/mindyourmind.png" />
@@ -108,10 +111,32 @@
     </div>
 
 	<!--Contact-->
+  <a name="contact"></a> 
   <div class="Contact">
-    <h1>Contact Me</h1>
+    <h1>Get in touch.</h1>
     <p>I am open to any and all communication/inquiries! Whether you want to collaborate on a project, hire me, or grab a coffee and chat!</p>
 
+    <div class="contactcontent">
+      <form class="cf">
+        <div class="half left cf">
+          <input type="text" id="input-name" placeholder="Name">
+          <input type="email" id="input-email" placeholder="Email address">
+          <input type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        </div>  
+        <input type="submit" value="Submit" id="input-submit">
+      </form>
+
+      <ul>
+        <li><a href="https://github.com/travismaloney"><img src="images/icon-github.png" />@travismaloney</a></li>
+        <li><a href="https://www.linkedin.com/in/travis-maloney-a760212b"><img src="images/icon-linkedin.png" />Travis Maloney</a></li>
+        <li><a href="https://medium.com/@TravisMaloney"><img src="images/icon-medium.png" />@TravisMaloney</a></li>
+        <li><a href="https://twitter.com/travismaloney"><img src="images/icon-twitter.png" />@travismaloney</a></li>
+        <li><a href="mailto:travis.maloney1@gmail.com"><img id="emailicon" src="images/icon-email.png" /> travis.maloney1@gmail.com</a></li>
+      </ul>
+    </div>
   </div>
 
   </main>
@@ -119,6 +144,9 @@
 
 
 	<!--Footer-->
+  <footer>
+    <p>Copyright &copy; 2017 Travis Maloney &bull; London, Ontario based Web Developer</p>
+  </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
