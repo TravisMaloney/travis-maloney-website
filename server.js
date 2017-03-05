@@ -6,7 +6,7 @@ var router = express.Router();
 app.set('port', (process.env.PORT || 80))
 app.use(express.static(__dirname + '/public'))
 
-router.get('/', function(request, response) {
+router.get('http://54.213.195.6/', function(request, response) {
   response.render('index')
 })
 
