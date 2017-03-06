@@ -122,14 +122,15 @@
     <div class="contactcontent">
       <form class="cf">
         <div class="half left cf">
-          <input type="text" id="input-name" placeholder="Name">
-          <input type="email" id="input-email" placeholder="Email address">
-          <input type="text" id="input-subject" placeholder="Subject">
+          <input type="text" id="name" placeholder="Name">
+          <input type="email" id="email" placeholder="Email address">
+          <input type="text" id="subject" placeholder="Subject">
         </div>
         <div class="half right cf">
-          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+          <textarea name="message" type="text" id="contentmessage" placeholder="Message"></textarea>
         </div>  
-        <input type="submit" value="Submit" id="input-submit">
+        <input type="submit" value="Submit" id="submit">
+        <span id="message"></span>
       </form>
 
       <ul>
@@ -154,6 +155,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="javascripts/app.js"></script>
+    <script>
+    $(document).ready(function(){
+        var from,name,subject,contentmessage;
+        $("#submit").click(function(){      
+            name=$("#name").val();
+            from=$("#email").val();
+            subject=$("#subject").val();
+            contentmessage=$("#contentmessage").val();
+            $("#message").text("Sending E-mail...Please wait");
+            $.get("http://localhost:8080/contact",{from:from,name:name,subject:subject,contentmessage:contentmessage},function(data){
+              if(data=="sent"){
+                  $("#message").empty().html("Email sent.");
+              };
+            });
+        });
+    });
+    </script>
 
   </body>
 </html>
